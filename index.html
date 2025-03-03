@@ -1,0 +1,389 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIVE FIRE TV</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0313;
+            color: #fff;
+        }
+
+        /* Toolbar */
+        .toolbar {
+            background-color: #088;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 2px solid #339;
+        }
+
+/* Welcome text box styling */
+.welcome-box {
+    background-color: #086;
+    padding: 10px;
+    border: 2px solid Green;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animated title style */
+.welcome-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 18s linear infinite;
+    font-size: 20px;
+    color: #00ff00;
+    font-weight: bold;
+}
+
+/* Animation keyframe */
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .search-bar input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        /* Channel Cards Container */
+        .channel-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .channel-card {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .channel-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .channel-card p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Responsive Mobile View */
+        @media (max-width: 600px) {
+            .search-bar input[type="text"] {
+                width: 70%;
+            }
+
+            .search-bar button {
+                width: auto;
+            }
+        }
+
+        /* Video Player Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .modal-content video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #fff;
+            float: right;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Toolbar -->
+    <div class="toolbar">LIVE FIRE TV SPORTS </div>
+
+<!-- Welcome Text -->
+    <div class="welcome-box">
+        <div class="welcome-text">WELCOME LIVE FIRE TV SPORTS SECTION ! DEAR USER OUR SPORTS SECTION SOME CHANNEL OFF / DOWN SO ANY PROVLEM CONTACT TLEGRAM WITH US⚠️⚠️</div>
+    </div>
+
+  
+    </div>
+
+    <!-- Channel Cards Container -->
+    <div class="channel-container">
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/15866.m3u8')">
+            <img src="https://user-images.githubusercontent.com/80354303/110754685-475b9900-8272-11eb-88e1-6c7b6a03169e.png" alt="Channel 1">
+            <p>T SPORTS</p>
+        </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/20007.m3u8')">
+            <img src="https://dtat2ks7dludr.cloudfront.net/spnsportsindia/channel_logos/SONY_SportsTen3_HD.png" alt="Channel 2">
+            <p>SONY SPORTS TEN 3 HD</p>
+        </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/19748.m3u8')">
+           <img src="https://jiotvimages.cdn.jio.com/dare_images/images/Ten2_HD.png" alt="Channel 3">
+            <p>SONY SPORTS TEN 2 HD</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/19747.m3u8')">
+<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Ten_HD.png" alt="Channel 4">
+            <p>SONY SPORTS TEN 1 HD</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/19867.m3u8')">
+<img src="https://dtat2ks7dludr.cloudfront.net/spnsportsindia/channel_logos/SONY_SportsTen5_HD.png" alt="Channel 5">
+            <p>SONY SPORTS TEN 5 HD</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/1551.m3u8')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Star_Sports_1_HD.png/800px-Star_Sports_1_HD.png?20221025095646" alt="Channel 6">
+            <p>STAR SPORTS 1</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/1552.m3u8')">
+<img src="https://static.wikia.nocookie.net/logopedia/images/8/82/SS2HD.jpg" alt="Channel 7">
+            <p>STAR SPORTS 2</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/502.m3u8')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP8j8Vc_lguK13yQO9X3u_hvSXI2kmnJAywg&s" alt="Channel 8">
+            <p>STAR SPORTS 3</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/1526.m3u8')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbwyIx255tT4LWQWeMxU91ocR1NZ6z9NkDig&s" alt="Channel 9">
+            <p>STAR SPORTS SELECTED 1</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/1550.m3u8')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQSvDBE3MJNSw1v-MjvOuFMeKm6rRyuyrtIQ&s" alt="Channel 10">
+            <p>STAR SPORTS SELECTED 2</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/514.m3u8')">
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Sports18_logo.svg/1200px-Sports18_logo.svg.png" alt="Channel 11">
+            <p>SPORTS 18 </p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/510.m3u8')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdvH-Of921vfUqxNaagvOvEG93bFuTCPp0DA&s" alt="Channel 12">
+            <p>SPORTS 18 KHEL</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/4619.m3u8')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSasHEB1s_iitApcYnJ_M_T7NhkKa171yGhBA&s" alt="Channel 13">
+            <p>TEN CRICKET</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/2748.m3u8')">
+<img src="https://media.designrush.com/inspirations/732055/conversions/Red-Bull-Logo-SVG-preview.jpg" alt="Channel 14">
+            <p>RED BULL SPORTS</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://one.luckonline.eu/live/Sohail02/myQYkEntaxuZ/6651.m3u8')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC8vNdMCTk3NRTvXhWbB8sRsfS_ABuBGEG3w&s" alt="Channel 15">
+            <p>FOX CRICKET 501</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/1400.m3u8')">
+<img src="https://upload.wikimedia.org/wikipedia/en/e/e4/PTV_Sports.png" alt="Channel 16">
+            <p>PTV SPORTS</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/2496.m3u8')">
+<img src="https://upload.wikimedia.org/wikipedia/en/0/0c/A_Sports_Logo.png" alt="Channel 17">
+            <p>A SPORTS</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/3434.m3u8')">
+<img src="https://seeklogo.com/images/G/geo-super-logo-9EE9DB603E-seeklogo.com.png" alt="Channel 18">
+            <p>GEO SUPER</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/2731.m3u8')">
+<img src="https://yt3.googleusercontent.com/ytc/AIdro_lEuwv7O-WkFLzgW0qjwUncBI59UXYOIB8vV9EjGEvYoA=s900-c-k-c0x00ffffff-no-rj" alt="Channel 19">
+            <p>SKY SPORTS CRICKET</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/2312.m3u8')">
+<img src="https://championstrophy2025.com/wp-content/uploads/2024/12/beIN-SPORTS-Live.jpg" alt="Channel 20">
+            <p>BEIN SPORTS</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/924.m3u8')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbqgAQwqW3IroNmYkHb2HEpHMoJxURM_2DAg&s" alt="Channel 21">
+            <p>BEIN SPORTS 2</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/2334.m3u8')">
+<img src="https://seeklogo.com/images/B/bein-sports-3-logo-42227D7D66-seeklogo.com.png" alt="Channel 22">
+            <p>BEIN SPORTS 3</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/2250.m3u8')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL7ZfLhHsAgzlp6hrWSDGZxVVSk3mCV0jQyw&s" alt="Channel 23">
+            <p>BEIN SPORTS 4</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/6439.m3u8')">
+<img src="https://logos-world.net/wp-content/uploads/2022/05/Eurosport-Emblem.png" alt="Channel 24">
+            <p>EUROSPORTS HD</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/3933.m3u8')">
+<img src="https://frontend-assets.clipsource.com/612dda2e469cb/dis-613765c33c1ce/2025/01/28/6798b02c49b1d_thumbnail.jpeg" alt="Channel 25">
+            <p>TNT SPORTS 1</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/3934.m3u8')">
+<img src="https://eu1-prod-images.disco-api.com/2023/07/18/64209d2e-8a4c-4056-bb24-836ce9f7922d.png?bf=0&f=jpg&p=true&q=70&w=1920" alt="Channel 26">
+            <p> TNT SPORTS 2</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/3935.m3u8')">
+<img src="https://eu1-prod-images.disco-api.com/2023/07/03/2c51d406-d2dc-49b0-87fa-d240b8baf8ba.png?bf=0&f=jpg&p=true&q=70&w=1920" alt="Channel 27">
+            <p>TNT SPORTS 3</p>
+            
+        </div>
+        <div class="channel-card" onclick="openPlayer('http://one.luckonline.eu/live/Sohail02/myQYkEntaxuZ/3936.m3u8')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShju6ssr0r68tyeN-6WbiN1uWJAzD9gfA_wg&s" alt="Channel 31">
+            <p>TNT SPORTS 4</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/6656.m3u8')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPpoDInKXhdcCHYlWX9jknEMhOiCj-oH5kag&s" alt="Channel 28">
+            <p> SSC EXTRA 1</p>
+            </div>
+        <div class="channel-card" onclick="openPlayer('http://starshare.org:8080/live/Clyde2024/Clyde2024/123101.m3u8')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbM1wfQf7_SDLpgAsVRQQ9HHAWqkubPQUa4A&s" alt="Channel 28">
+            <p>SSC EXTRA 2</p>
+            </div>
+        <div class="channel-card" onclick="openPlayer('http://one.luckonline.eu/live/Sohail02/myQYkEntaxuZ/6650.m3u8')">
+<img src="https://i.pinimg.com/736x/77/6f/9f/776f9f887c933c83f5abe5cf595c2fde.jpg" alt="Channel 28">
+            <p>SSC 1</p>
+           </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/6652.m3u8')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5cFsDW7yA43hYidqciNicdvhEj93cS6l0kA&s" alt="Channel 28">
+            <p>SSC 2</p>
+            </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/4526.m3u8')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1YpBnvOsuOh0O-Wu_vxbA3I_YXhrOkOIFUw&s" alt="Channel 28">
+            <p>SUPER SPORTS CRICKET</p>
+            </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/2620.m3u8')">
+<img src="https://static.skyassets.com/contentstack/assets/blt143e20b03d72047e/blta95035dd51049d82/65bbb5730b2014cb5b412a00/SkySports_1x1.png" alt="Channel 28">
+            <p>SKY SPORTS</p>
+            </div>
+        
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/1404.m3u8')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/52/ICC-Champions-Trophy-2025-Logo.jpg" alt="Channel 29">
+            <p>ICC ENGLISH</p>
+ </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/516.m3u8')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg1TynmHZlOdhMluKpKdf20LVl6v9p7SrE2A&s" alt="Channel 30">
+            <p>ASTRO CRICKET</p>
+        </div>
+        <div class="channel-card" onclick="openPlayer('http://bd.bdix.xyz:8880/live/789865437/789865437/4613.m3u8')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIufmW1omlnsJqmJ565Ef4qyNGjLNuARvHHg&s" alt="Channel 31">
+            <p>WILLOW CRICKET 2</p>
+                      
+
+        </div>
+        <div class="channel-card" onclick="openPlayer('http://one.luckonline.eu/live/Sohail02/myQYkEntaxuZ/1956.m3u8')">
+            <img src="https://image.discovery.indazn.com/ca/v2/ca/image?id=15j00hgsf1ioo17d1fl8wc69jb_image-header_pRow_1730196750000&quality=70" alt="Channel 31">
+            <p>DAZN 1</p>
+            </div>
+        <div class="channel-card" onclick="openPlayer('http://one.luckonline.eu/live/Sohail02/myQYkEntaxuZ/531.m3u8')">
+            <img src="https://image.discovery.indazn.com/ca/v2/ca/image?id=yhoot1zy31gt13i1wkgl4cvxw_image-header_pRow_1730196778000&quality=70" alt="Channel 31">
+            <p>DAZN 2</p>
+            </div>
+        <div class="channel-card" onclick="openPlayer('https://lifetvbd.xyz:8880/play/GSRi_h9-4AF4tZsFgc_jfv8RVLo-OuP2zIqG3evRbns/m3u8')">
+<img src="https://images.icc-cricket.com/image/upload/t_ratio21_9-size60/prd/Champions_Trophy_2025_Banner" alt="Channel 29">
+            <p>ICC BANGLA</p>
+            </div>
+        <div class="channel-card" onclick="openPlayer('http://link.luckonline.eu/live/Sohail02/myQYkEntaxuZ/632.m3u8')">
+<img src="https://www.livemint.com/lm-img/img/2025/01/30/original/IML_1738233284482.jpg" alt="Channel 29">
+            <p>INTERNATIONAL MASTERS LEAGUE</p>
+            
+            
+        </div>
+        <!-- Add more channel cards as necessary -->
+    </div>
+
+    <!-- Video Player Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePlayer()">×</span>
+            <video id="videoPlayer" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // Open Video Player
+        function openPlayer(videoSrc) {
+            var modal = document.getElementById("videoModal");
+            var videoPlayer = document.getElementById("videoPlayer");
+            videoPlayer.src = videoSrc;  // Set the video source
+            modal.style.display = "flex";  // Show the modal
+        }
+
+        // Close Video Player
+        function closePlayer() {
+            var modal = document.getElementById("videoModal");
+            var videoPlayer = document.getElementById("videoPlayer");
+            videoPlayer.pause();  // No Pause the video
+           
+            modal.style.display = "none";  // Hide the modal
+        }
+
+        // Close the modal if clicked outside the video
+        window.onclick = function(event) {
+            var modal = document.getElementById("videoModal");
+            if (event.target == modal) {
+                closePlayer();
+            }
+        }
+    </script>
+
+</body>
+</html>
